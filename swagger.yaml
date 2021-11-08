@@ -1,25 +1,25 @@
 openapi: 3.0.0
 
 info:
-  description: Modelo de dados base para o projeto BIOMA
-  title: BIOMA Project
+  description: 'Modelo de dados base para o projeto BIOMA'
+  title: 'BIOMA Project'
   version: 1.0.0
   
 components:
   schemas:
     ModeloDeDados:
-      description: Modelo de dados associado ao projeto BIOMA/siBIO
+      description: 'Modelo de dados associado ao projeto BIOMA/siBIO'
       type: object
       properties:
         consumoEnergia:
-          description: Consumo comulativo de energia elétrica em kWh
+          description: 'Consumo comulativo de energia elétrica em kWh'
           minimum: 0
           type: number
           x-ngsi:
             type: Property
             units: kWh
         consumoAgua:
-          description: Consumo comulativo de água em m^3
+          description: 'Consumo comulativo de água em m^3'
           minimum: 0
           type: number
           x-ngsi:
@@ -45,7 +45,7 @@ components:
         type: Property
       x-derived-from: ""
       x-disclaimer: 'jpcoelho @ BIOMA 2021'
-      x-license-url: https://github.com/jpcoelhoATipbDOTpt/BIOMA/blob/main/LICENSE
+      x-license-url: 'https://github.com/jpcoelhoATipbDOTpt/BIOMA/blob/main/LICENSE'
       x-model-tags: ""
       x-version: 0.0.3
 
@@ -54,7 +54,7 @@ paths:
     get:
       responses:
         '200':
-          description: OK
+          description: 'OK'
           content:
             application/ld+json:
               schema:
