@@ -3,15 +3,27 @@
 
 openapi: 3.0.0
 
+# General Data Model Information
 info:
-  description: 'Modelo de dados base para o projeto BIOMA'
-  title: 'BIOMA Project'
-  version: 1.0.0
+  title: siBIO@BIOMA Project
+  description: Data model for the siBIO component developped under the BIOMA project
+  version: 0.0.1
+  contact:
+    name: Bioeconomia para a mobilização da cadeia Agroalimentar
+    url: https://projetobioma.pt/
   
 components:
   schemas: 
-    WaterQualityObserved: 
+    Organization: 
       $ref: "https://smart-data-models.github.io/dataModel.WaterQuality/WaterQualityObserved/model.yaml#/WaterQualityObserved"
+    Process:
+      $ref: "https://smart-data-models.github.io/dataModel.WaterQuality/WaterQualityObserved/model.yaml#/WaterQualityObserved"
+    Asset:
+      $ref: "https://smart-data-models.github.io/dataModel.WaterQuality/WaterQualityObserved/model.yaml#/WaterQualityObserved"
+      
+    
+    
+    
       
       
       
