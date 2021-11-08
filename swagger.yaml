@@ -18,16 +18,9 @@ components:
             type: Property
             units: m3
         id:
-          anyOf:
-          - description: 'Propriedade: Formato do identificador de qualquer entidade.'
-            maxLength: 256
-            minLength: 1
-            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
-            type: string
-          - description: 'Propriedade: Formato do identificador de qualquer entidade.'
-            format: uri
-            type: string
-          description: 'Identificador único da entidade.'
+          description: 'Propriedade: Formato do identificador de qualquer entidade.'
+          format: uri
+          type: string
           x-ngsi:
             type: Property
         type:
