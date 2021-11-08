@@ -1,7 +1,15 @@
+openapi: 3.0.0
+
+info:
+  description: Modelo de dados base para o projeto BIOMA
+  title: BIOMA Project
+  version: 1.0.0
+  
 components:
   schemas:
     ModeloDeDados:
       description: Modelo de dados associado ao projeto BIOMA/siBIO
+      type: object
       properties:
         consumoEnergia:
           description: Consumo comulativo de energia elétrica em kWh
@@ -28,23 +36,19 @@ components:
           enum:
             - ModeloDeDados
           type: string
-      x-ngsi:
-        type: Property
+          
       required:
         - id
         - type
-      type: object
+        
+      x-ngsi:
+        type: Property
       x-derived-from: ""
       x-disclaimer: 'jpcoelho @ BIOMA 2021'
       x-license-url: https://github.com/jpcoelhoATipbDOTpt/BIOMA/blob/main/LICENSE
       x-model-tags: ""
       x-version: 0.0.3
-  
-info:
-  description: Modelo de dados base para o projeto BIOMA
-  title: BIOMA Project
-  version: 1.0.0
-openapi: 3.0.0
+
 paths:
   /BIOMA/siBIO/entities:
     get:
