@@ -15,66 +15,12 @@ info:
 components:
   schemas: 
     Organization: 
-      $ref: "https://smart-data-models.github.io/dataModel.WaterQuality/WaterQualityObserved/model.yaml#/WaterQualityObserved"
-    Process:
-      $ref: "https://smart-data-models.github.io/dataModel.WaterQuality/WaterQualityObserved/model.yaml#/WaterQualityObserved"
-    Asset:
-      $ref: "https://smart-data-models.github.io/dataModel.WaterQuality/WaterQualityObserved/model.yaml#/WaterQualityObserved"
+      $ref: "https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/organization.yaml#/organization"
+#    Process:
+#      $ref: "https://smart-data-models.github.io/dataModel.WaterQuality/WaterQualityObserved/model.yaml#/WaterQualityObserved"
+#    Asset:
+#      $ref: "https://smart-data-models.github.io/dataModel.WaterQuality/WaterQualityObserved/model.yaml#/WaterQualityObserved"
       
-    
-    
-    
-      
-      
-      
-      
-      
-      
-      
-      
-  schemas:
-    ModeloDeDados:
-      description: 'Modelo de dados associado ao projeto BIOMA/siBIO'
-      type: object
-      properties:
-        consumoEnergia:
-          description: 'Consumo comulativo de energia elétrica em kWh'
-          minimum: 0
-          type: number
-          x-ngsi:
-            type: Property
-            units: kWh
-        consumoAgua:
-          description: 'Consumo comulativo de água em m^3'
-          minimum: 0
-          type: number
-          x-ngsi:
-            type: Property
-            units: m3
-        id:
-          description: 'Propriedade: Formato do identificador de qualquer entidade.'
-          format: uri
-          type: string
-          x-ngsi:
-            type: Property
-        type:
-          description: 'Entidade tipo ModeloDeDados'
-          enum:
-            - ModeloDeDados
-          type: string
-          
-      required:
-        - id
-        - type
-        
-      x-ngsi:
-        type: Property
-      x-derived-from: ""
-      x-disclaimer: 'jpcoelho @ BIOMA 2021'
-      x-license-url: 'https://github.com/jpcoelhoATipbDOTpt/BIOMA/blob/main/LICENSE'
-      x-model-tags: ""
-      x-version: 0.0.3
-
 paths:
   /BIOMA/siBIO/entities:
     get:
