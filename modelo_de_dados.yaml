@@ -1,0 +1,38 @@
+--- 
+components: 
+  schemas:
+    Modelo_de_Dados:
+      description: 'Modelo de dados associado ao projeto BIOMA/siBIO'
+      properties:
+        consumoEnergia:
+          description: 'Consumo comulativo de energia elétrica em kWh'
+          minimum: 0
+          type:  number
+          x-ngsi:
+            type: Property
+            units: kWh
+        consumoAgua:
+          description: 'Consumo comulativo de água em m^3'
+          minimum: 0
+          type: number
+          x-ngsi:
+            type: Property
+            units: m3          
+info: 
+  description: "Modelo de dados base para o projeto BIOMA"
+  title: BIOMA Project
+  version: "1.0.0"
+openapi: "3.0.0"
+
+# These paths are merely representative.
+paths: 
+  /BIOMA/siBIO/entities: 
+    get: 
+      responses: 
+        ? "200"
+        : 
+          description:  OK
+          content: 
+            application/ld+json: 
+              schema: 
+                type: object
