@@ -1,0 +1,51 @@
+    asset:
+      title: Asset Description
+      type: object
+      description: Describes the asset
+      properties:
+        id:
+          description: Asset Identifier
+          type: string
+          format: uri
+          example: urn:organization:process:assetnbr
+          x-ngsi:
+            type: Property
+            
+        name: 
+          description: Asset designation
+          type: string
+          example: 99-89-SO
+          x-ngsi:
+            model: https://schema.org/name
+            type: Property
+                 
+        location:
+          description: Asset's geographic location (latitude and longitude)
+          type: object
+          title: Geolocation
+          properties:
+            latitude:
+              description: The asset's latitude
+              type: number         
+              example: -25.96
+              x-ngsi:
+                model: https://schema.org/latitude
+                type: Property
+            longitude:
+              description: The asset's longitude
+              type: number         
+              example: 32.56
+              x-ngsi:
+                model: https://schema.org/longitude
+                type: Property
+          required:
+            - latitude
+            - longitude
+          x-ngsi:
+            model: https://schema.org/GeoCoordinates
+            type: Property
+        
+        
+      required:
+        - id
+        - name
