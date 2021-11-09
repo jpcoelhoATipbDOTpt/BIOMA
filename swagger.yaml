@@ -16,8 +16,8 @@ components:
   schemas: 
     Organization: 
       $ref: "https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/organization.yaml#/organization"
-#    Process:
-#      $ref: "https://smart-data-models.github.io/dataModel.WaterQuality/WaterQualityObserved/model.yaml#/WaterQualityObserved"
+    Process:
+      $ref: "https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/organization.yaml#/process"
 #    Asset:
 #      $ref: "https://smart-data-models.github.io/dataModel.WaterQuality/WaterQualityObserved/model.yaml#/WaterQualityObserved"
       
