@@ -11,7 +11,23 @@ node:
           example: urn:process:organization:asset:nodeNBR
           x-ngsi:
             type: Property
-        
+
+        category: 
+          description: >
+            Define node category:
+            * `Automatic` - Measures delivered automatically by an IoT device
+            * `Manual` - Measures introduced by a human operator
+            * `Both` - This node have measures that are introduced by an IoT device and a human
+          type: string
+          enum: 
+            - Automatic
+            - Manual
+            - Both
+          example: Automatic
+          x-ngsi:
+            model: https://schema.org/category
+            type: Property
+            
         location:
           description: Measurement node's geographic location (latitude and longitude)
           type: object
