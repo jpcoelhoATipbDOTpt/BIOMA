@@ -1,5 +1,5 @@
     organization:
-      title: Organization Description
+      title: Organization description
       type: object
       description: Describes the organization entity
       properties:
