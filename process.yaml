@@ -9,8 +9,16 @@
           format: uri
           example: urn:process:organization:processNBR
           x-ngsi:
-            type: Property   
-        
+            type: Property
+            
+        name: 
+          description: Process designation
+          type: string
+          example: Bottling station
+          x-ngsi:
+            model: https://schema.org/name
+            type: Property
+            
         location:
           description: Process's geographic location (latitude and longitude)
           type: object
