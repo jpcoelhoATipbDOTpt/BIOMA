@@ -1,5 +1,5 @@
 node:
-      title: Measurement node description
+      title: Node
       type: object
       description: Describes a given process within a company
       
