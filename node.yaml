@@ -2,81 +2,81 @@ node:
       title: Node
       type: object
       description: Describes a given process within a company
-      
-      properties:
-        id:
-          description: Measurement node identifier
-          type: string
-          format: uri
-          example: urn:process:organization:asset:nodeNBR
-          x-ngsi:
-            type: Property
 
-        category: 
-          description: >
-            Define node category:
-            * `Automatic` - Measures delivered automatically by an IoT device
-            * `Manual` - Measures introduced by a human operator
-            * `Both` - This node have measures that are introduced by an IoT device and a human
-          type: string
-          enum: 
-            - Automatic
-            - Manual
-            - Both
-          example: Automatic
-          x-ngsi:
-            model: https://schema.org/category
-            type: Property
- 
-         human:
-          description: Human Operator Description
-          type: object
-          title: Human
-          properties:
-            name:
-              description: The operator's name
-              type: string         
-              example: John Doe
-              x-ngsi:
-                model: https://schema.org/name
-                type: Property
-            X1:
-              description: Colocar outras caraterísticas
-              type: string         
-              example: blá blá
-              x-ngsi:
-                type: Property
-          required:
-            - name
-          x-ngsi:
-            model: https://schema.org/Person
-            type: Property
- 
-        location:
-          description: Measurement node's geographic location (latitude and longitude)
-          type: object
-          title: Geolocation
-          properties:
-            latitude:
-              description: The measurement node's latitude
-              type: number         
-              example: -25.96
-              x-ngsi:
-                model: https://schema.org/latitude
-                type: Property
-            longitude:
-              description: The measurement node's longitude
-              type: number         
-              example: 32.56
-              x-ngsi:
-                model: https://schema.org/longitude
-                type: Property
-          required:
-            - latitude
-            - longitude
-          x-ngsi:
-            model: https://schema.org/GeoCoordinates
-            type: Property
-  
+      properties:
+            id:
+                  description: Measurement node identifier
+                  type: string
+                  format: uri
+                  example: urn:process:organization:asset:nodeNBR
+                  x-ngsi:
+                        type: Property
+
+            category: 
+                  description: >
+                        Define node category:
+                        * `Automatic` - Measures delivered automatically by an IoT device
+                        * `Manual` - Measures introduced by a human operator
+                        * `Both` - This node have measures that are introduced by an IoT device and a human
+                  type: string
+                  enum: 
+                        - Automatic
+                        - Manual
+                        - Both
+                  example: Automatic
+                  x-ngsi:
+                        model: https://schema.org/category
+                        type: Property
+
+            human:
+                  description: Human Operator Description
+                  type: object
+                  title: Human
+                  properties:
+                        name:
+                              description: The operator's name
+                              type: string         
+                              example: John Doe
+                              x-ngsi:
+                                    model: https://schema.org/name
+                                    type: Property
+                        X1:
+                              description: Colocar outras caraterísticas
+                              type: string         
+                              example: blá blá
+                              x-ngsi:
+                                    type: Property
+                  required:
+                        - name
+                  x-ngsi:
+                        model: https://schema.org/Person
+                        type: Property
+
+            location:
+                  description: Measurement node's geographic location (latitude and longitude)
+                  type: object
+                  title: Geolocation
+                  properties:
+                        latitude:
+                              description: The measurement node's latitude
+                              type: number         
+                              example: -25.96
+                              x-ngsi:
+                                    model: https://schema.org/latitude
+                                    type: Property
+                        longitude:
+                              description: The measurement node's longitude
+                              type: number         
+                              example: 32.56
+                              x-ngsi:
+                                    model: https://schema.org/longitude
+                                    type: Property
+                  required:
+                        - latitude
+                        - longitude
+                  x-ngsi:
+                        model: https://schema.org/GeoCoordinates
+                        type: Property
+
       required:
-        - id
+            - id
