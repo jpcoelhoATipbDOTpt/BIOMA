@@ -27,7 +27,31 @@ node:
           x-ngsi:
             model: https://schema.org/category
             type: Property
-            
+ 
+         human:
+          description: Human Operator Description
+          type: object
+          title: Human
+          properties:
+            name:
+              description: The operator's name
+              type: string         
+              example: John Doe
+              x-ngsi:
+                model: https://schema.org/name
+                type: Property
+            X1:
+              description: Colocar outras caraterísticas
+              type: string         
+              example: blá blá
+              x-ngsi:
+                type: Property
+          required:
+            - name
+          x-ngsi:
+            model: https://schema.org/Person
+            type: Property
+ 
         location:
           description: Measurement node's geographic location (latitude and longitude)
           type: object
