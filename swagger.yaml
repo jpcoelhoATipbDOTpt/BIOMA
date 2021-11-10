@@ -15,11 +15,13 @@ info:
 components:
   schemas: 
     Organization: 
-      $ref: "https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/organization.yaml#/organization"
+      $ref: "https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/organization.yaml"
     Process:
-      $ref: "https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/organization.yaml#/process"
-#    Asset:
-#      $ref: "https://smart-data-models.github.io/dataModel.WaterQuality/WaterQualityObserved/model.yaml#/WaterQualityObserved"
+      $ref: "https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/process.yaml"
+    Asset:
+      $ref: "https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/asset.yaml"
+    Node:
+      $ref: "https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/node.yaml"
       
 paths:
   /BIOMA/siBIO/entities:
