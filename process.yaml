@@ -1,5 +1,5 @@
     process:
-      title: Process description
+      title: Process
       type: object
       description: Describes a given process within a company
       properties:
