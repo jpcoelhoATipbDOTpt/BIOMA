@@ -1,5 +1,5 @@
     asset:
-      title: Asset Description
+      title: Asset
       type: object
       description: Describes the asset
       properties:
