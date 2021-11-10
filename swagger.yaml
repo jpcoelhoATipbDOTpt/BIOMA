@@ -15,7 +15,7 @@ info:
 components:
   schemas: 
     Organization: 
-      $ref: "https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/organization.yaml"
+      $ref: "https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/organization.yaml#organization"
     Process:
       $ref: "https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/process.yaml"
     Asset:
