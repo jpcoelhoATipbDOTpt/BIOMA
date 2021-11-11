@@ -1,7 +1,7 @@
 sensors:
-  title: Sensor's description and physical variables
+  title: Sensors
   type: object
-  description: Describes the set of possible measurement physical variables
+  description: Sensor's description and physical variables
   properties:
     id:
       description: Sensor identifier
