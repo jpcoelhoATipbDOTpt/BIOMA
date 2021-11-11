@@ -64,21 +64,15 @@ node:
                               x-ngsi:
                                     model: https://schema.org/name
                                     type: Property
-                        hardware:
-                              description: Node's hardware characteristics
+                        software:
+                              description:
                               type: object
-                              title: Hardware
+                              title: Software
                               properties:
-                                    CPU:
-                                          description: Describe the CPU installed on the device
-                                          type: string
-                                          example: ARM Cortex M4
-                                          x-ngsi:
-                                                type: Property
                                     OS:
                                           description: >
                                                       Describe the operating system installed on the device:
-                                                      * `Baremetal` - No operating system or custom
+                                                      * `Baremetal` - No operating system or custom-made OS
                                                       * `freeRTOS` - Measures introduced by a human operator
                                                       * `Linux` - Raspberry Pi OS, Ubuntu, etc.
                                                       * `Zephyr`- Linux based real-time OS
@@ -91,29 +85,97 @@ node:
                                                 - Zephyr
                                                 - Other
                                           example: Baremetal
+                                    Firmware:
+                                          description: Firmware version.
+                                          type: string
+                                          example: 1.0.0
+                                          
+                        hardware:
+                              description: Node's hardware characteristics
+                              type: object
+                              title: Hardware
+                              properties:
+                                    CPU:
+                                          description: Describe the CPU installed on the device
+                                          type: string
+                                          example: ARM Cortex M4
+                                          x-ngsi:
+                                                type: Property
+
                                     GNSS:
                                           description: Indicates the existence of absence of a GNSS receiver (GPS) installed or acessible by the device. 
                                           type: boolean
                                           example: true
+                                    RFID:
+                                          description: Indicates the existence of absence of an RFID identification tag. 
+                                          type: boolean
+                                          example: false                                    
                                     connectivity: 
                                           description: >
                                                       Describe the network connectivity transceivers available on the device:
-                                                      * `None` - No operating system or custom
-                                                      * `Wifi` - Measures introduced by a human operator
-                                                      * `Bluetooth`
-                                                      * `Ethernet`
-                                                      * `GSM/GPRS` - Raspberry Pi OS, Ubuntu, etc.
-                                                      * `NB-LTE` - Other OS
-                                                      * `NFC`
-                                                      * `RFID`
-                                                      * `LPWAN`
+                                                      * `None` - No wired or wireless connectivity available
+                                                      * `Wifi` - Wifi available
+                                                      * `Bluetooth` - Bluetooth availble
+                                                      * `Ethernet` - Wired network connection
+                                                      * `GSM/GPRS` - GSM or 2G data transfer system available
+                                                      * `NFC` - Near-field communication
+                                                      * `LPWAN` - Can be any of the availble low power wide area network such as NB-IoT, LoRa, SigFox, etc.
                                           type: array
                                           items: {}
                                           example: ["WiFi","Bluetooth",{"LPWAN":"LoRa"}]
+                                    powerSupply:
+                                          description:
+                                          type: object
+                                          title: Power supply:
+                                          properties:
+                                                battery:
+                                                      description:
+                                                      type: object
+                                                      title: Battery
+                                                      properties:
+                                                            available:
+                                                                  description: Indicate if the device is powered by battery or not.
+                                                                  type: boolean
+                                                                  example: true
+                                                            details:
+                                                                  description: Details on the eventual installed batteries
+                                                                  type: object
+                                                                  title: Battery details
+                                                                  properties:
+                                                                        technology:
+                                                                              description: Type of battery tecnology.
+                                                                              type: string
+                                                                              enum:
+                                                                                    - LiPo
+                                                                                    - LiIon
+                                                                                    - LiFePO
+                                                                                    - NiCd
+                                                                                    - NiMH
+                                                                                    - Lead-Acid
+                                                                                    - Non-recheargeable
+                                                                                    - Other
+                                                                              example: LiPo
+                                                                        charge:
+                                                                              description: Battery charge expressed in mAh. In the case of battery packs, this is the charge of each battery.
+                                                                              type: integer
+                                                                              
+                                                                              
+                                                                  
+                                                                        
+                                                                  
+                                          description: >
+                                                      Describes the available power supplies:
+                                                      * `Battery` - 
+                                          type: array
+                                          items: {}
+                                          example: [{"Battery":"2300mA LiPo"},{"Solar":"60W"}]
+
+                               
                                           
                                   
                         required:
                               - name
+                              - connectivity
                         x-ngsi:
                               model: https://schema.org/Person
                               type: Property
