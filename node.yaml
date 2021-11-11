@@ -243,11 +243,10 @@ node:
                                       type: Property                                      
               sensors:
                       description: Enumerate the sensors attached to the IoT device.
-                      type: string
-#                          type: array
-#                          items: 
-#                            $ref: '#/components/schemas/Pet'
-                      example: [Temperature,EEnergy,WaterConsumption]
+                      type: array
+                      items: 
+                            $ref: '#/variables'
+                      example: [energyConsumption,waterConsumption]
                       
         location:
             description: Node's geographic location (latitude and longitude)
