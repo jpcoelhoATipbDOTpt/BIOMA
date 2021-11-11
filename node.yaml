@@ -90,6 +90,10 @@ node:
                                                 - Zephyr
                                                 - Other
                                           example: Baremetal
+                                    GNSS:
+                                          description: Indicates the existence of absence of a GNSS receiver (GPS) installed or acessible by the device. 
+                                          type: boolean
+                                          example: true
                                     connectivity: 
                                           description: Describe the network connectivity transceivers available on the device.
                                                       * `None` - No operating system or custom
@@ -102,8 +106,10 @@ node:
                                                       * `RFID`
                                                       * `LPWAN`
                                           type: array
+                                          items: {}
+                                          example: ["WiFi","Bluetooth",{"LPWAN":"LoRa"}]
                                           
-                                          
+                                  
                         required:
                               - name
                         x-ngsi:
