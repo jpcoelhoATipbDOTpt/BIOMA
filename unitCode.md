@@ -608,6 +608,8 @@
 | DAD         | ten day                                                              |
 | DAY         | day                                                                  |
 | DB          | dry pound                                                            |
+| DBM         | decibel-milliwatts                                                   |
+| DBW         | decibel-watts                                                        |
 | DC          | disk (disc)                                                          |
 | DD          | degree                                                               |
 | DE          | deal                                                                 |
