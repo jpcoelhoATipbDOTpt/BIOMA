@@ -76,7 +76,8 @@ node:
                                           x-ngsi:
                                                 type: Property
                                     OS:
-                                          description: Describe the operating system installed on the device:
+                                          description: >
+                                                      Describe the operating system installed on the device:
                                                       * `Baremetal` - No operating system or custom
                                                       * `freeRTOS` - Measures introduced by a human operator
                                                       * `Linux` - Raspberry Pi OS, Ubuntu, etc.
@@ -95,7 +96,8 @@ node:
                                           type: boolean
                                           example: true
                                     connectivity: 
-                                          description: Describe the network connectivity transceivers available on the device.
+                                          description: >
+                                                      Describe the network connectivity transceivers available on the device:
                                                       * `None` - No operating system or custom
                                                       * `Wifi` - Measures introduced by a human operator
                                                       * `Bluetooth`
