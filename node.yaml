@@ -1,210 +1,246 @@
 node:
-      title: Node
-      type: object
-      description: Describes a given process within a company
+    title: Node
+    type: object
+    description: Describes a given process within a company
+    properties:
+        id:
+            description: Measurement node identifier
+            type: string
+            format: uri
+            example: urn:process:organization:asset:nodeNBR
+            x-ngsi:
+                type: Property
 
-      properties:
-            id:
-                  description: Measurement node identifier
-                  type: string
-                  format: uri
-                  example: urn:process:organization:asset:nodeNBR
-                  x-ngsi:
+        category: 
+            description: >
+                Define node category:
+                * `Automatic` - Measures delivered automatically by an IoT device
+                * `Manual` - Measures introduced by a human operator
+                * `Both` - This node have measures that are introduced by an IoT device and a human
+            type: string
+            enum: 
+                - Automatic
+                - Manual
+                - Both
+            example: Automatic
+            x-ngsi:
+                model: https://schema.org/category
+                type: Property
+
+        manual:
+            description: Human Operator Description
+            type: object
+            title: Human
+            properties:
+                name:
+                    description: The operator's name
+                    type: string         
+                    example: John Doe
+                    x-ngsi:
+                        model: https://schema.org/name
                         type: Property
-
-            category: 
-                  description: >
-                        Define node category:
-                        * `Automatic` - Measures delivered automatically by an IoT device
-                        * `Manual` - Measures introduced by a human operator
-                        * `Both` - This node have measures that are introduced by an IoT device and a human
-                  type: string
-                  enum: 
-                        - Automatic
-                        - Manual
-                        - Both
-                  example: Automatic
-                  x-ngsi:
-                        model: https://schema.org/category
+                X1:
+                    description: Colocar outras caraterísticas
+                    type: string         
+                    example: blá blá
+                    x-ngsi:
                         type: Property
+            required:
+                - name
+            x-ngsi:
+                model: https://schema.org/Person
+                type: Property
 
-            manual:
-                  description: Human Operator Description
-                  type: object
-                  title: Human
-                  properties:
-                        name:
-                              description: The operator's name
-                              type: string         
-                              example: John Doe
-                              x-ngsi:
-                                    model: https://schema.org/name
-                                    type: Property
-                        X1:
-                              description: Colocar outras caraterísticas
-                              type: string         
-                              example: blá blá
-                              x-ngsi:
-                                    type: Property
-                  required:
-                        - name
-                  x-ngsi:
-                        model: https://schema.org/Person
-                        type: Property
-
-            automatic:
-                  description: IoT device description
-                  type: object
-                  title: IoT
-                  properties:
-                        name:
-                              description: The IoT's device name
-                              type: string         
-                              example: XPTO
-                              x-ngsi:
-                                    model: https://schema.org/name
-                                    type: Property
-                        software:
-                              description:
-                              type: object
-                              title: Software
-                              properties:
-                                    OS:
-                                          description: >
-                                                      Describe the operating system installed on the device:
-                                                      * `Baremetal` - No operating system or custom-made OS
-                                                      * `freeRTOS` - Measures introduced by a human operator
-                                                      * `Linux` - Raspberry Pi OS, Ubuntu, etc.
-                                                      * `Zephyr`- Linux based real-time OS
-                                                      * `Other` - Other OS
-                                          type: string
-                                          enum:
-                                                - Baremetal
-                                                - FreeRTOS
-                                                - Linux
-                                                - Zephyr
-                                                - Other
-                                          example: Baremetal
-                                    Firmware:
-                                          description: Firmware version.
-                                          type: string
-                                          example: 1.0.0
-                                          
-                        hardware:
-                              description: Node's hardware characteristics
-                              type: object
-                              title: Hardware
-                              properties:
-                                    CPU:
-                                          description: Describe the CPU installed on the device
-                                          type: string
-                                          example: ARM Cortex M4
-                                          x-ngsi:
-                                                type: Property
-
-                                    GNSS:
-                                          description: Indicates the existence of absence of a GNSS receiver (GPS) installed or acessible by the device. 
-                                          type: boolean
-                                          example: true
-                                    RFID:
-                                          description: Indicates the existence of absence of an RFID identification tag. 
-                                          type: boolean
-                                          example: false                                    
-                                    connectivity: 
-                                          description: >
-                                                      Describe the network connectivity transceivers available on the device:
-                                                      * `None` - No wired or wireless connectivity available
-                                                      * `Wifi` - Wifi available
-                                                      * `Bluetooth` - Bluetooth availble
-                                                      * `Ethernet` - Wired network connection
-                                                      * `GSM/GPRS` - GSM or 2G data transfer system available
-                                                      * `NFC` - Near-field communication
-                                                      * `LPWAN` - Can be any of the availble low power wide area network such as NB-IoT, LoRa, SigFox, etc.
-                                          type: array
-                                          items: {}
-                                          example: ["WiFi","Bluetooth",{"LPWAN":"LoRa"}]
-                                    powerSupply:
-                                          description:
-                                          type: object
-                                          title: Power supply:
-                                          properties:
-                                                battery:
-                                                      description:
-                                                      type: object
-                                                      title: Battery
-                                                      properties:
-                                                            available:
-                                                                  description: Indicate if the device is powered by battery or not.
-                                                                  type: boolean
-                                                                  example: true
-                                                            details:
-                                                                  description: Details on the eventual installed batteries
-                                                                  type: object
-                                                                  title: Battery details
-                                                                  properties:
-                                                                        technology:
-                                                                              description: Type of battery tecnology.
-                                                                              type: string
-                                                                              enum:
-                                                                                    - LiPo
-                                                                                    - LiIon
-                                                                                    - LiFePO
-                                                                                    - NiCd
-                                                                                    - NiMH
-                                                                                    - Lead-Acid
-                                                                                    - Non-recheargeable
-                                                                                    - Other
-                                                                              example: LiPo
-                                                                        charge:
-                                                                              description: Battery charge expressed in mAh. In the case of battery packs, this is the charge of each battery.
-                                                                              type: integer
-                                                                              
-                                                                              
-                                                                  
-                                                                        
-                                                                  
-                                          description: >
-                                                      Describes the available power supplies:
-                                                      * `Battery` - 
-                                          type: array
-                                          items: {}
-                                          example: [{"Battery":"2300mA LiPo"},{"Solar":"60W"}]
-
-                               
-                                          
+        automatic:
+            description: IoT device description
+            type: object
+            title: IoT
+            properties:
+            name:
+                description: The IoT's device name
+                type: string         
+                example: XPTO
+                x-ngsi:
+                    model: https://schema.org/name
+                    type: Property
+                software:
+                    description:
+                    type: object
+                    title: Software
+                    properties:
+                        OS:
+                            description: >
+                                      Describe the operating system installed on the device:
+                                      * `Baremetal` - No operating system or custom-made OS
+                                      * `freeRTOS` - Measures introduced by a human operator
+                                      * `Linux` - Raspberry Pi OS, Ubuntu, etc.
+                                      * `Zephyr`- Linux based real-time OS
+                                      * `Other` - Other OS
+                            type: string
+                            enum:
+                                - Baremetal
+                                - FreeRTOS
+                                - Linux
+                                - Zephyr
+                                - Other
+                            example: Baremetal
+                        Firmware:
+                            description: Firmware version.
+                            type: string
+                            example: 1.0.0
                                   
-                        required:
-                              - name
-                              - connectivity
-                        x-ngsi:
-                              model: https://schema.org/Person
-                              type: Property
+                hardware:
+                    description: Node's hardware characteristics
+                    type: object
+                    title: Hardware
+                    properties:
+                        CPU:
+                            description: Describe the CPU installed on the device
+                            type: string
+                            example: ARM Cortex M4
+                            x-ngsi:
+                                type: Property
 
-            location:
-                  description: Measurement node's geographic location (latitude and longitude)
-                  type: object
-                  title: Geolocation
-                  properties:
-                        latitude:
-                              description: The measurement node's latitude
-                              type: number         
-                              example: -25.96
-                              x-ngsi:
-                                    model: https://schema.org/latitude
-                                    type: Property
-                        longitude:
-                              description: The measurement node's longitude
-                              type: number         
-                              example: 32.56
-                              x-ngsi:
-                                    model: https://schema.org/longitude
-                                    type: Property
-                  required:
-                        - latitude
-                        - longitude
-                  x-ngsi:
-                        model: https://schema.org/GeoCoordinates
+                        GNSS:
+                            description: Indicates the existence of absence of a GNSS receiver (GPS) installed or acessible by the device. 
+                            type: boolean
+                            example: true
+                        RFID:
+                            description: Indicates the existence of absence of an RFID identification tag. 
+                            type: boolean
+                            example: false                                    
+                        connectivity:
+                            description: Data communication capability of the device.
+                            title: connectivity
+                            type: object
+                            properties:
+                                transceivers:
+                                    description: >
+                                              Describe the network connectivity transceivers available on the device:
+                                              * `None` - No wired or wireless connectivity available
+                                              * `Wifi` - Wifi available
+                                              * `Bluetooth` - Bluetooth availble
+                                              * `Ethernet` - Wired network connection
+                                              * `GSM/GPRS` - GSM or 2G data transfer system available
+                                              * `NFC` - Near-field communication
+                                              * `LPWAN` - Can be any of the availble low power wide area network such as NB-IoT, LoRa, SigFox, etc.
+                                    type: array
+                                    items: {}
+                                    example: ["WiFi","Bluetooth",{"LPWAN":"LoRa"}]
+                                rssi:
+                                    description: Indicate the value of the RSSI (in dBm) of available wireless transceivers.
+                                    type: array
+                                    items: {}
+                                    example: ["WiFi":"-10","LPWAN.LoRa":"-95"]
+                        powerSupply:
+                            description: Describes the types of power supply availble on a given device.
+                            type: object
+                            title: Power supply:
+                            properties:
+                                battery:
+                                    description: Indicate if the device is battery operated and, if so, the electric characteristics of the batteries.
+                                    type: object
+                                    title: Battery
+                                    properties:
+                                        available:
+                                            description: Indicate if the device is powered by battery or not.
+                                            type: boolean
+                                            example: true
+                                        level:
+                                            description: Indicate the battery charge level (if applicable) [0-100%].
+                                            type: integer
+                                            minimum: 0
+                                            maximum: 100
+                                            example: 85                                                    
+                                        details:
+                                            description: Details on the eventual installed batteries
+                                            type: object
+                                            title: Battery details
+                                            properties:
+                                                technology:
+                                                    description: Type of battery tecnology.
+                                                    type: string
+                                                    enum:
+                                                        - LiPo
+                                                        - LiIon
+                                                        - LiFePO
+                                                        - NiCd
+                                                        - NiMH
+                                                        - Lead-Acid
+                                                        - Non-recheargeable
+                                                        - Other
+                                                    example: LiPo
+                                                charge:
+                                                    description: Battery charge value expressed in mAh. In the case of battery packs, this is the charge sum of all batteries in the pack.
+                                                    type: integer
+                                                    minimum: 0
+                                                    example: 2300
+                                solar:
+                                    description: If present, describe the details of the solar panel structure installed to supply or recharge the device's batteries.
+                                    type: object
+                                    title: Solar panels
+                                    properties:
+                                        available:
+                                            description: Indicate if solar panels are available .
+                                            type: boolean
+                                            example: true
+                                        details:
+                                            description: Details on the eventual installed solar panels
+                                            type: object
+                                            title: Solar panel details
+                                            properties:
+                                                technology:
+                                                description: Type of solar panel tecnology.
+                                                type: string
+                                                enum:
+                                                    - Monocrystalline
+                                                    - Polycrystalline
+                                                    - Other
+                                                example: Polycrystalline
+                                            power:
+                                                description: Total installed power in watts.
+                                                type: integer
+                                                minimum: 0
+                                                example: 10                                                           
+                                poe:
+                                    description: Device supplied by power-over-ethernet?
+                                    type: boolean
+                                    example: false
+                                mains:
+                                    description: Device supplied by mains voltage?
+                                    type: boolean
+                                    example: false
+                sensors:
+                        description: Enumerate the sensors attached to the IoT device.
+                        type: array
+                        items: string
+                        example: [Temperature,EEnergy,WaterConsumption]
+                        
+        location:
+            description: Node's geographic location (latitude and longitude)
+            type: object
+            title: Geolocation
+            properties:
+                latitude:
+                    description: The measurement node's latitude
+                    type: number         
+                    example: -25.96
+                    x-ngsi:
+                        model: https://schema.org/latitude
                         type: Property
+                longitude:
+                    description: The measurement node's longitude
+                    type: number         
+                    example: 32.56
+                    x-ngsi:
+                        model: https://schema.org/longitude
+                        type: Property
+            required:
+                - latitude
+                - longitude
+            x-ngsi:
+                model: https://schema.org/GeoCoordinates
+                type: Property
 
-      required:
-            - id
+        required:
+            - id    
