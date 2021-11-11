@@ -1,7 +1,7 @@
     asset:
       title: Asset
       type: object
-      description: Describes the asset
+      description: Describes an asset within a process
       properties:
         id:
           description: Asset Identifier
