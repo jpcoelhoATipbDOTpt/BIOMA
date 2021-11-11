@@ -7,7 +7,7 @@
           description: Organization Identifier
           type: string
           format: uri
-          example: urn:organization:organizationTaxId
+          example: urn:organizationNBR
           x-ngsi:
             type: Property
             
