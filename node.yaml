@@ -28,7 +28,7 @@ node:
                         model: https://schema.org/category
                         type: Property
 
-            human:
+            manual:
                   description: Human Operator Description
                   type: object
                   title: Human
@@ -51,6 +51,64 @@ node:
                   x-ngsi:
                         model: https://schema.org/Person
                         type: Property
+
+            automatic:
+                  description: IoT device description
+                  type: object
+                  title: IoT
+                  properties:
+                        name:
+                              description: The IoT's device name
+                              type: string         
+                              example: XPTO
+                              x-ngsi:
+                                    model: https://schema.org/name
+                                    type: Property
+                        hardware:
+                              description: Node's hardware characteristics
+                              type: object
+                              title: Hardware
+                              properties:
+                                    CPU:
+                                          description: Describe the CPU installed on the device
+                                          type: string
+                                          example: ARM Cortex M4
+                                          x-ngsi:
+                                                type: Property
+                                    OS:
+                                          description: Describe the operating system installed on the device:
+                                                      * `Baremetal` - No operating system or custom
+                                                      * `freeRTOS` - Measures introduced by a human operator
+                                                      * `Linux` - Raspberry Pi OS, Ubuntu, etc.
+                                                      * `Zephyr`- Linux based real-time OS
+                                                      * `Other` - Other OS
+                                          type: string
+                                          enum:
+                                                - Baremetal
+                                                - FreeRTOS
+                                                - Linux
+                                                - Zephyr
+                                                - Other
+                                          example: Baremetal
+                                    connectivity: 
+                                          description: Describe the network connectivity transceivers available on the device.
+                                                      * `None` - No operating system or custom
+                                                      * `Wifi` - Measures introduced by a human operator
+                                                      * `Bluetooth`
+                                                      * `Ethernet`
+                                                      * `GSM/GPRS` - Raspberry Pi OS, Ubuntu, etc.
+                                                      * `NB-LTE` - Other OS
+                                                      * `NFC`
+                                                      * `RFID`
+                                                      * `LPWAN`
+                                          type: array
+                                          
+                                          
+                        required:
+                              - name
+                        x-ngsi:
+                              model: https://schema.org/Person
+                              type: Property
 
             location:
                   description: Measurement node's geographic location (latitude and longitude)
