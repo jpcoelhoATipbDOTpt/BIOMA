@@ -82,10 +82,14 @@ node:
                               - Zephyr
                               - Other
                           example: Baremetal
+                          x-ngsi:
+                            type: Property
                       Firmware:
                           description: Firmware version.
                           type: string
                           example: 1.0.0
+                          x-ngsi:
+                            type: Property                          
                                 
               hardware:
                   description: Describes the device's hardware layer.
@@ -103,10 +107,14 @@ node:
                           description: Indicates the existence of absence of a GNSS receiver (GPS) installed or acessible by the device. 
                           type: boolean
                           example: true
+                          x-ngsi:
+                              type: Property                          
                       RFID:
                           description: Indicates the existence of absence of an RFID identification tag. 
                           type: boolean
-                          example: false                                    
+                          example: false
+                          x-ngsi:
+                              type: Property                      
                       connectivity:
                           description: Data communication capability of the device.
                           title: connectivity
@@ -124,11 +132,16 @@ node:
                                   type: array
                                   items: {}
                                   example: ["WiFi","Bluetooth",{"LPWAN":"LoRa"}]
+                                  x-ngsi:
+                                      type: Property                                  
                               rssi:
                                   description: Indicate the value of the RSSI (in dBm) of available wireless transceivers.
                                   type: array
                                   items: {}
                                   example: ["WiFi":"-10","LPWAN.LoRa":"-95"]
+                                  x-ngsi:
+                                      units: DBM   
+                                      type: Property                                  
                       powerSupply:
                           description: Describes the types of power supply availble on a given device.
                           type: object
@@ -143,12 +156,17 @@ node:
                                           description: Indicate if the device is powered by battery or not.
                                           type: boolean
                                           example: true
+                                          x-ngsi:
+                                              type: Property                                               
                                       level:
                                           description: Indicate the battery charge level (if applicable) [0-100%].
                                           type: integer
                                           minimum: 0
                                           maximum: 100
-                                          example: 85                                                    
+                                          example: 85
+                                          x-ngsi:
+                                            units: P1
+                                            type: Property
                                       details:
                                           description: Details on the eventual installed batteries
                                           type: object
@@ -167,11 +185,16 @@ node:
                                                       - Non-recheargeable
                                                       - Other
                                                   example: LiPo
+                                                  x-ngsi:
+                                                      type: Property                                                       
                                               charge:
                                                   description: Battery charge value expressed in mAh. In the case of battery packs, this is the charge sum of all batteries in the pack.
                                                   type: integer
                                                   minimum: 0
                                                   example: 2300
+                                              x-ngsi:
+                                                  units: E09
+                                                  type: Property                                                       
                               solar:
                                   description: If present, describe the details of the solar panel structure installed to supply or recharge the device's batteries.
                                   type: object
@@ -181,6 +204,8 @@ node:
                                           description: Indicate if solar panels are available .
                                           type: boolean
                                           example: true
+                                          x-ngsi:
+                                              type: Property                                             
                                       details:
                                           description: Details on the installed solar panels
                                           type: object
@@ -194,19 +219,28 @@ node:
                                                     - Polycrystalline
                                                     - Other
                                                 example: Polycrystalline
+                                                x-ngsi:
+                                                    type: Property                                                   
                                               power:
                                                 description: Total installed power in watts.
                                                 type: integer
                                                 minimum: 0
-                                                example: 10                                                           
+                                                example: 10
+                                                x-ngsi:
+                                                    units: WTT
+                                                    type: Property                                                   
                               poe:
                                   description: Device supplied by power-over-ethernet?
                                   type: boolean
                                   example: false
+                                  x-ngsi:
+                                      type: Property                                      
                               mains:
                                   description: Device supplied by mains voltage?
                                   type: boolean
                                   example: false
+                                  x-ngsi:
+                                      type: Property                                      
               sensors:
                       description: Enumerate the sensors attached to the IoT device.
                       type: string
