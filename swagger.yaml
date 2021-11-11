@@ -24,7 +24,7 @@ components:
       $ref: "https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/node.yaml#/node"
       
 paths:
-  /BIOMA/siBIO/entities:
+  /ngsi-ld/v1/entities:
     get:
       responses:
         '200':
