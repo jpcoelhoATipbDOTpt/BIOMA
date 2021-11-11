@@ -1,0 +1,19 @@
+variables:
+    title: Physical variables
+    type: object
+    description: Describes the set of possible measurement physical variables
+    properties:
+    airTemperature:
+      description: 'Air temperature.'
+      minimum: -100
+      maximum: 100
+      type: number
+      x-ngsi:
+        type: Property
+        units: 
+    conductivity:
+      description: 'Electrical Conductivity.'
+      minimum: 0
+      type: number
+      x-ngsi:
+        type: Property
