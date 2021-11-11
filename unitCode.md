@@ -91,7 +91,7 @@
 | 1X          | quarter mile                                                         |
 | 2A          | radian per second                                                    |
 | 2B          | radian per second squared                                            |
-| 2C          | rÃ¶ntgen                                                             |
+| 2C          | roentgen                                                             |
 | 2I          | British thermal unit per hour                                        |
 | 2J          | cubic centimetre per second                                          |
 | 2K          | cubic foot per hour                                                  |
@@ -105,7 +105,7 @@
 | 2V          | megagram per hour                                                    |
 | 2W          | bin                                                                  |
 | 2X          | metre per minute                                                     |
-| 2Y          | millirÃ¶ntgen                                                        |
+| 2Y          | milliroentgen                                                        |
 | 2Z          | millivolt                                                            |
 | 3B          | megajoule                                                            |
 | 3C          | manmonth                                                             |
@@ -145,7 +145,7 @@
 | 5Q          | seismic line                                                         |
 | A1          | 15 C calorie                                                         |
 | A10         | ampere square metre per joule second                                 |
-| A11         | Ã¥ngstrÃ¶m                                                           |
+| A11         | Angstrom                                                             |
 | A12         | astronomical unit                                                    |
 | A13         | attojoule                                                            |
 | A14         | barn                                                                 |
@@ -785,7 +785,7 @@
 | KPH         | kilogram of potassium hydroxide (caustic potash)                     |
 | KPO         | kilogram of potassium oxide                                          |
 | KPP         | kilogram of phosphorus pentoxide (phosphoric anhydride)              |
-| KR          | kilorÃ¶ntgen                                                         |
+| KR          | kiloroentgen                                                         |
 | KS          | thousand pound per square inch                                       |
 | KSD         | kilogram of substance 90 % dry                                       |
 | KSH         | kilogram of sodium hydroxide (caustic soda)                          |
