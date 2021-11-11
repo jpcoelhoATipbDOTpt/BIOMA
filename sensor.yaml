@@ -31,3 +31,5 @@ sensor:
             x-ngsi:
                 model: https://schema.org/DateTime
                 type: Property
+        required:
+            -id
