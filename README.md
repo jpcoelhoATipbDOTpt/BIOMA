@@ -1,4 +1,4 @@
-![This is an image](#/Assets/logo.png)
+!(/Assets/logo.png)
 # BIOMA
 Modelo de dados para o projeto BIOMA
 
