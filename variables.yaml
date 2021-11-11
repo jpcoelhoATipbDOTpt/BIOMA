@@ -3,17 +3,17 @@ variables:
     type: object
     description: Describes the set of possible measurement physical variables
     properties:
-    airTemperature:
-      description: 'Air temperature.'
-      minimum: -100
-      maximum: 100
-      type: number
-      x-ngsi:
-        type: Property
-        units: 
-    conductivity:
-      description: 'Electrical Conductivity.'
-      minimum: 0
-      type: number
-      x-ngsi:
-        type: Property
+    energyConsumption:
+        description: Electrical energy consumed by a given asset/kWh
+        minimum: 0
+        type: number
+        x-ngsi:
+            type: Property
+            units: KWH
+    waterConsumption:
+        description: Water consumption by a given asset within a process (e.g. machine, irrigation line, etc.)/m3
+        minimum: 0
+        type: number
+        x-ngsi:
+            type: Property
+            units: MTQ
