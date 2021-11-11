@@ -192,9 +192,9 @@ node:
                                                   type: integer
                                                   minimum: 0
                                                   example: 2300
-                                              x-ngsi:
-                                                  units: E09
-                                                  type: Property                                                       
+                                                  x-ngsi:
+                                                      units: E09
+                                                      type: Property                                                       
                               solar:
                                   description: If present, describe the details of the solar panel structure installed to supply or recharge the device's batteries.
                                   type: object
