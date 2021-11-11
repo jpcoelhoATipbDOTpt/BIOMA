@@ -1,4 +1,4 @@
-sensor:
+sensors:
     title: Sensor's description and physical variables
     type: object
     description: Describes the set of possible measurement physical variables
