@@ -245,7 +245,7 @@ node:
                       description: Enumerate the sensors attached to the IoT device.
                       type: array
                       items: 
-                            $ref: '#/variables'
+                            $ref: https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/variables.yaml#/variables
                       example: [energyConsumption,waterConsumption]
                       
         location:
