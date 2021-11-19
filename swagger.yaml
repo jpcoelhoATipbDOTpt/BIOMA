@@ -22,7 +22,9 @@ components:
       $ref: "https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/asset.yaml#/asset"
     Node:
       $ref: "https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/node.yaml#/node"
-      
+    Worker:
+      $ref: "https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/worker.yaml#/worker"
+
 paths:
   /ngsi-ld/v1/entities:
     get:
