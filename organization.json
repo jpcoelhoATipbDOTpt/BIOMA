@@ -1,5 +1,5 @@
 {
-    "id": "urn:ngsi-ld:Organization:organizationid",
+    "id": "urn:ngsi-ld:Organization:001",
     "type": "Organization",
     "legalName": {
         "type": "Property",
@@ -46,9 +46,9 @@
         }
     },
 
-    "refPointOfInterest": {
+    "refConnectedToProcess": {
         "type": "Relationship",
-        "object": "urn:ngsi-ld:PointOfInterest:RZ:MainSquare"
+        "object": "urn:ngsi-ld:Process:001"
     },
 
     "@context": [
