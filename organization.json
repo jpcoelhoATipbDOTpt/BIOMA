@@ -5,11 +5,11 @@
         "type": "Property",
         "value": "BIOMA",
     },
-    "taxID!:{
+    "taxID":{
         "type": "Property",
         "value": "6000123456",
     },
-    "ssnID!:{
+    "ssnID":{
         "type": "Property",
         "value": "25665541125",
     },
@@ -53,7 +53,6 @@
 
     "@context": [
         "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
-        "https://schema.lab.fiware.org/ld/context",
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        "https://github.com/jpcoelhoATipbDOTpt/BIOMA/blob/main/bioma-datamodel.jsonld"
     ]
 }
