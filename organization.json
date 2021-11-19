@@ -52,7 +52,8 @@
     },
 
     "@context": [
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://schema.org/Organization",
         "https://github.com/jpcoelhoATipbDOTpt/BIOMA/blob/main/bioma-datamodel.jsonld"
     ]
 }
