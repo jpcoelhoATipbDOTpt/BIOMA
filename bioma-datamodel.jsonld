@@ -11,8 +11,8 @@
         "software": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#software",
         "ssnID": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#ssnID",
         
-        "refConnectedToProcess": {
-            "@id": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#refConnectedToProcess",
+        "refConnectedToOrganization": {
+            "@id": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#refConnectedToOrganization",
             "@type": "@id"
         }
     }
