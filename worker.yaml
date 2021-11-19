@@ -1,0 +1,47 @@
+    worker:
+      title: Worker
+      type: object
+      description: Identifies a worker within an organization
+      properties:
+        id:
+          description: Worker Identifier
+          type: string
+          format: uri
+          example: urn:organization:worker:workernbr
+          x-ngsi:
+            type: Property
+            
+        name: 
+          description: Worker first name
+          type: string
+          example: John
+          x-ngsi:
+            model: https://schema.org/Person
+            type: Property
+            
+        familyName: 
+          description: Worker last name
+          type: string
+          example: Smith
+          x-ngsi:
+            model: https://schema.org/Person
+            type: Property
+            
+        taxID:
+          description: Worker Tax ID
+          type: string
+          example: 254545879
+          x-ngsi:
+            model: https://schema.org/Person
+            type: Property
+        
+        functionPerformed:
+          description: The tasks and functions performed by the worker
+          type: string
+          example: Driver
+          x-ngsi:
+            type: Property       
+        
+      required:
+        - id
+        - name
