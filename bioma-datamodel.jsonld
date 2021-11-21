@@ -11,6 +11,9 @@
         "software": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#software",
         "ssnID": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#ssnID",
         
+        "address": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#address",
+        "telephone": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#telephone",
+        
         "refConnectedToOrganization": {
             "@id": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#refConnectedToOrganization",
             "@type": "@id"
