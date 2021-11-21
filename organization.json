@@ -47,8 +47,8 @@
     },
 
     "@context": [
+        "https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/bioma-datamodel.jsonld",
         "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
-        "https://fiware.github.io/data-models/context.jsonld",
-        "https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/bioma-datamodel.jsonld"
+        "https://fiware.github.io/data-models/context.jsonld"
     ]
 }
