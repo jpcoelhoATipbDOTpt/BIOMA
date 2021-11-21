@@ -3,26 +3,26 @@
     "type": "Organization",
     "legalName": {
         "type": "Property",
-        "value": "BIOMA",
+        "value": "BIOMA"
     },
     "taxID":{
         "type": "Property",
-        "value": "6000123456",
+        "value": "6000123456"
     },
     "ssnID":{
         "type": "Property",
-        "value": "25665541125",
+        "value": "25665541125"
     },
     "caeID":{
         "type": "Property",
-        "value": "123456789",
+        "value": "123456789"
     },
 
     "address": {
         "type": "Property",
         "value": {
             "streetAddress": "Campus de Sta. Apolónia, Gab 41",
-            "postalCode": "5300-253"
+            "postalCode": "5300-253",
             "addressLocality": "Bragança",
             "addressCountry": "Portugal"
         }
