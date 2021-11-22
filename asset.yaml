@@ -18,7 +18,14 @@
           x-ngsi:
             model: https://schema.org/name
             type: Property
-                 
+
+        category: 
+          description: Asset type
+          type: string
+          example: Transportation Vehicle
+          x-ngsi:
+            type: Property
+
         location:
           description: Asset's geographic location (latitude and longitude)
           type: object
