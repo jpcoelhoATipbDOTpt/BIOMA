@@ -44,28 +44,29 @@
   
     "RSSI": {
         "type": "Property",
-        "value": 00,
+        "value": 0,
         "unitCode": "DBM",
         "observedAt": "0000-00-00T00:00:00Z"
     },
+    
     "sensors":{
       "type": "Property",
       "value": ["energyConsumption","waterConsumption"]
-    }
+    },
   
     "energyConsumption": {
         "type": "Property",
-        "value": 00,
+        "value": 0,
         "unitCode": "KWH",
         "observedAt": "0000-00-00T00:00:00Z"
-      }
+      },
 
     "waterConsumption": {
         "type": "Property",
-        "value": 00,
+        "value": 0,
         "unitCode": "MTQ",
         "observedAt": "0000-00-00T00:00:00Z"
-      }
+      },
 
    "refConnectedToAsset": {
         "type": "Relationship",
