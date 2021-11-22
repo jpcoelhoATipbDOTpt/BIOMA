@@ -1,0 +1,38 @@
+{
+    "id": "urn:ngsi-ld:Asset:002",
+    "type": "Asset",
+  
+    "name": {
+        "type": "Property",
+        "value": "Eclipse SL02"
+    },
+
+    "category":{
+        "type": "Property",
+        "value": "Machine"
+    },
+
+    "description":{
+        "type": "Property",
+        "value": "7.5kW, 380V, packaging machine."
+    },
+
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+             "type": "Point",
+             "coordinates": [41.796391953113876, -6.768110546834977]
+        }
+    },
+    
+   "refConnectedToProcess": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Process:001"
+   },
+
+    "@context": [
+        "https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/bioma-datamodel.jsonld",
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://fiware.github.io/data-models/context.jsonld"
+    ]
+}
