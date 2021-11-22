@@ -1,0 +1,80 @@
+{
+    "id": "urn:ngsi-ld:Node:001",
+    "type": "Node",
+  
+    "name": {
+        "type": "Property",
+        "value": "Measurement Node 1"
+    },
+
+    "category":{
+        "type": "Property",
+        "value": "Automatic"
+    },
+
+    "software":{
+        "type": "Property",
+        "value": "Baremetal"
+    },
+  
+    "firmware":{
+        "type": "Property",
+        "value": "1.0.0"
+    },
+  
+    "CPU":{
+        "type": "Property",
+        "value": "ATTINY85"
+    }, 
+    
+    "GNSS":{
+        "type": "Property",
+        "value": false
+    }, 
+          
+    "RFID":{
+        "type": "Property",
+        "value": false
+    },  
+  
+    "connectivity":{
+        "type": "Property",
+        "value": ["LoRa"]
+    },  
+  
+    "RSSI": {
+        "type": "Property",
+        "value": 00,
+        "unitCode": "DBM",
+        "observedAt": "0000-00-00T00:00:00Z"
+    },
+    "sensors":{
+      "type": "Property",
+      "value": ["energyConsumption","waterConsumption"]
+    }
+  
+    "energyConsumption": {
+        "type": "Property",
+        "value": 00,
+        "unitCode": "KWH",
+        "observedAt": "0000-00-00T00:00:00Z"
+      }
+
+    "waterConsumption": {
+        "type": "Property",
+        "value": 00,
+        "unitCode": "MTQ",
+        "observedAt": "0000-00-00T00:00:00Z"
+      }
+
+   "refConnectedToAsset": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Asset:002"
+   },
+
+    "@context": [
+        "https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/bioma-datamodel.jsonld",
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://fiware.github.io/data-models/context.jsonld"
+    ]
+}
