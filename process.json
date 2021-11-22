@@ -3,11 +3,11 @@
     "type": "Process",
     "name": {
         "type": "Property",
-        "value": "Strawberry Wash Station"
+        "value": "Strawberry Processing"
     },
     "description":{
         "type": "Property",
-        "value": "The strawberries that arrive from the field are delivered to a conveyer and carried out to a wash station where they are cleaned and desinfected."
+        "value": "This process regards the strawberry processing that begins with the transportation from the greenhouse to the indutrial processing unit and ends with the fruit's packaging."
     },
 
     "location": {
