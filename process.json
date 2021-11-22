@@ -1,0 +1,31 @@
+{
+    "id": "urn:ngsi-ld:Process:001",
+    "type": "Process",
+    "name": {
+        "type": "Property",
+        "value": "Strawberry Wash Station"
+    },
+    "description":{
+        "type": "Property",
+        "value": "The strawberries that arrive from the field are delivered to a conveyer and carried out to a wash station where they are cleaned and desinfected."
+    },
+
+    "location": {
+        "type": "GeoProperty",
+        "value": {
+             "type": "Point",
+             "coordinates": [41.796391953113876, -6.768110546834977]
+        }
+    },
+    
+   "refConnectedToOrganization": {
+        "type": "Relationship",
+        "object": "urn:ngsi-ld:Organization:001"
+   },
+
+    "@context": [
+        "https://raw.githubusercontent.com/jpcoelhoATipbDOTpt/BIOMA/main/bioma-datamodel.jsonld",
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
+        "https://fiware.github.io/data-models/context.jsonld"
+    ]
+}
