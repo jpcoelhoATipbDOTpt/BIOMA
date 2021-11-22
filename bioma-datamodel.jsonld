@@ -13,10 +13,14 @@
         
         "address": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#address",
         "telephone": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#telephone",
+        "category": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#category",
         
         "refConnectedToOrganization": {
             "@id": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#refConnectedToOrganization",
             "@type": "@id"
-        }
-    }
+        },
+        "refConnectedToProcess":{
+            "@id": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#refConnectedToProcess",
+            "@type": "@id"
+        }        
 } 
