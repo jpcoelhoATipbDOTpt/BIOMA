@@ -6,14 +6,23 @@
         "Process": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#Process",
         "caeID": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#:caeID",
         "category": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#category",
-        "hardware": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#hardware",
-        "sensors": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#sensors",
-        "software": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#software",
         "ssnID": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#ssnID",
         
         "address": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#address",
         "telephone": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#telephone",
         "category": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#category",
+
+        "hardware": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#hardware",
+        "software": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#software",
+        "firmware": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#firmware",
+        "CPU": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#CPU",
+        "GNSS": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#GNSS",
+        "RFID": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#RFID",
+        "RSSI": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#RSSI",
+        "connectivity": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#connectivity",
+        "sensors": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#sensors",        
+        "energyConsumption": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#energyConsumption",
+        "waterConsumption": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#waterConsumption",
         
         "refConnectedToOrganization": {
             "@id": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#refConnectedToOrganization",
@@ -21,6 +30,10 @@
         },
         "refConnectedToProcess":{
             "@id": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#refConnectedToProcess",
+            "@type": "@id"
+        },
+        "refConnectedToAsset":{
+            "@id": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#refConnectedToAsset",
             "@type": "@id"
         }        
 } 
