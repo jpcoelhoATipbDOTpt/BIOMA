@@ -37,5 +37,6 @@
         "refConnectedToAsset":{
             "@id": "https://github.com/jpcoelhoATipbDOTpt/BIOMA/edit/main/bioma-datamodel.jsonld#refConnectedToAsset",
             "@type": "@id"
-        }        
+        }
+    }
 } 
