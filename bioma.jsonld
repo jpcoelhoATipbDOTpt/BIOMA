@@ -1,0 +1,591 @@
+{
+    "@context": {
+        "type": "@type",
+        "id": "@id",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
+        "fiware": "https://uri.fiware.org/ns/data-models#",
+        "schema": "https://schema.org/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "Asset": "fiware:Asset",
+        "Node": "fiware:Node",
+        "Organization": "fiware:Organization",
+        "Process": "fiware:Process",
+        "Worker": "fiware:Worker",
+        "X1": {
+            "@id": "fiware:X1",
+            "@type": "xsd:string"
+        },
+        "address": "fiware:address",
+        "addressCountry": {
+            "@id": "fiware:addressCountry",
+            "@type": "xsd:string"
+        },
+        "addressLocality": {
+            "@id": "fiware:addressLocality",
+            "@type": "xsd:string"
+        },
+        "automatic": "fiware:automatic",
+        "caeID": {
+            "@id": "fiware:caeID",
+            "@type": "xsd:string"
+        },
+        "category": {
+            "@id": "fiware:category",
+            "@type": "xsd:string"
+        },
+        "email": {
+            "@id": "fiware:email",
+            "@type": "xsd:string"
+        },
+        "familyName": {
+            "@id": "fiware:familyName",
+            "@type": "xsd:string"
+        },
+        "functionPerformed": {
+            "@id": "fiware:functionPerformed",
+            "@type": "xsd:string"
+        },
+        "hardware": "fiware:hardware",
+        "latitude": {
+            "@id": "fiware:latitude",
+            "@type": "xsd:number"
+        },
+        "legalName": {
+            "@id": "fiware:legalName",
+            "@type": "xsd:string"
+        },
+        "location": "fiware:location",
+        "longitude": {
+            "@id": "fiware:longitude",
+            "@type": "xsd:number"
+        },
+        "manual": "fiware:manual",
+        "name": {
+            "@id": "fiware:name",
+            "@type": "xsd:string"
+        },
+        "postalCode": {
+            "@id": "fiware:postalCode",
+            "@type": "xsd:string"
+        },
+        "sensors": {
+            "@id": "fiware:sensors",
+            "@type": "xsd:array"
+        },
+        "software": "fiware:software",
+        "ssnID": {
+            "@id": "fiware:ssnID",
+            "@type": "xsd:string"
+        },
+        "streetAddress": {
+            "@id": "fiware:streetAddress",
+            "@type": "xsd:string"
+        },
+        "taxID": {
+            "@id": "fiware:taxID",
+            "@type": "xsd:string"
+        },
+        "telephone": {
+            "@id": "fiware:telephone",
+            "@type": "xsd:string"
+        }
+    },
+    "@graph": [
+        {
+            "@id": "fiware:Organization",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Describes the organization entity"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "Organization"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:Process",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Describes a given process within a company"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "Process"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:Asset",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Describes an asset within a process"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "Asset"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:Node",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Describes a given node within an asset"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "Node"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:Worker",
+            "@type": "rdfs:Class",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Identifies a worker within an organization"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "Worker"
+                }
+            ],
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            }
+        },
+        {
+            "@id": "fiware:id",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Organization Identifier"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "id"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:legalName",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Organization's legal name"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "legalName"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:taxID",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "The organization's tax number"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "taxID"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:ssnID",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "The organization's social security number"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "ssnID"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:caeID",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "The organization's economic activity code"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "caeID"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:address",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "The company's headquarters address"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "address"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:email",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Contact email address"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "email"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:telephone",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Mobile or telephone contact"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "telephone"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:location",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Company's geographic location (latitude and longitude)"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "location"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:id",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Process identifier"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "id"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:name",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Process designation"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "name"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:location",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Process's geographic location (latitude and longitude)"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "location"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:id",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Asset Identifier"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "id"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:name",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Asset designation"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "name"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:category",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Asset type"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "category"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:location",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Asset's geographic location (latitude and longitude)"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "location"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:id",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Measurement node identifier"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "id"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:manual",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Human Operator Description"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "manual"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:automatic",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "IoT device description"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "automatic"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:location",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Node's geographic location (latitude and longitude)"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "location"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:id",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Worker Identifier"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "id"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:name",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Worker first name"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "name"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:familyName",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Worker last name"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "familyName"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:taxID",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "Worker Tax ID"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "taxID"
+                }
+            ]
+        },
+        {
+            "@id": "fiware:functionPerformed",
+            "@type": "ngsi-ld:Property",
+            "rdfs:comment": [
+                {
+                    "@language": "en",
+                    "@value": "The tasks and functions performed by the worker"
+                }
+            ],
+            "rdfs:label": [
+                {
+                    "@language": "en",
+                    "@value": "functionPerformed"
+                }
+            ]
+        }
+    ]
+}
